@@ -1,0 +1,38 @@
+# Environment
+.env
+.env.local
+
+# Vendor
+/vendor/
+
+# Composer
+composer.lock
+
+# Storage
+/storage/logs/*.log
+/storage/cache/*
+!/storage/cache/.gitkeep
+/storage/sessions/*
+!/storage/sessions/.gitkeep
+
+# Uploads
+/public/uploads/courses/*
+!/public/uploads/courses/.gitkeep
+/public/uploads/certificates/*
+!/public/uploads/certificates/.gitkeep
+/public/uploads/profile_pictures/*
+!/public/uploads/profile_pictures/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests
+/tests/coverage/
