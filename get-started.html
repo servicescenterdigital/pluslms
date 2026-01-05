@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - DGS-Pay</title>
+    <meta name="description" content="Get started with DGS-Pay payment gateway. Create your account, set up your first payment, and start processing transactions in minutes.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading DGS-Pay...</p>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="/images/logo.svg" alt="DGS-Pay" class="logo">
+                <span class="brand-text">DGS-Pay</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/pricing.html" class="nav-link">Pricing</a>
+                <a href="/docs" class="nav-link">Docs</a>
+                <a href="/why-dgs-pay.html" class="nav-link">Why DGS-Pay</a>
+                <a href="/about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions desktop-nav">
+                <a href="/login.html" class="btn-secondary">Login</a>
+                <a href="/get-started.html" class="btn-primary active">Get Started</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-content">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="/pricing.html" class="mobile-nav-link">Pricing</a>
+                <a href="/docs" class="mobile-nav-link">Documentation</a>
+                <a href="/why-dgs-pay.html" class="mobile-nav-link">Why DGS-Pay</a>
+                <a href="/about.html" class="mobile-nav-link">About</a>
+                <a href="/login.html" class="mobile-nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-compact">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Get Started with
+                    <span class="gradient-text">DGS-Pay</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Join thousands of developers building the future of payments. 
+                    Create your account and start processing transactions in minutes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Up Form -->
+    <section class="signup-section">
+        <div class="container">
+            <div class="signup-grid">
+                <!-- Sign Up Form -->
+                <div class="signup-form-container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Create Your Account</h2>
+                            <p class="card-subtitle">Start with a free account - no credit card required</p>
+                        </div>
+                        
+                        <form class="signup-form" id="signup-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="first-name">First Name</label>
+                                    <input type="text" id="first-name" name="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" name="lastName" class="form-input" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="company">Company Name (Optional)</label>
+                                <input type="text" id="company" name="company" class="form-input">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="password">Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="password" name="password" class="form-input" required>
+                                    <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <small class="form-help">Must be at least 8 characters long</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="confirm-password">Confirm Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="confirm-password" name="confirmPassword" class="form-input" required>
+                                    <button type="button" class="password-toggle" onclick="togglePassword('confirm-password')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span class="checkbox-custom"></span>
+                                    I agree to the <a href="/terms.html" target="_blank">Terms of Service</a> 
+                                    and <a href="/privacy.html" target="_blank">Privacy Policy</a>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkbox-custom"></span>
+                                    Send me updates about new features and payment industry insights
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary large">
+                                <i class="fas fa-rocket"></i>
+                                Create Account
+                            </button>
+                        </form>
+                        
+                        <div class="form-footer">
+                            <p>Already have an account? <a href="/login.html">Sign in</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Benefits -->
+                <div class="signup-benefits">
+                    <h3>What You'll Get</h3>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Instant API Access</h4>
+                            <p>Get your test API keys immediately and start building your integration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Real-time Dashboard</h4>
+                            <p>Monitor transactions, analytics, and customer data in real-time</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Bank-level Security</h4>
+                            <p>PCI DSS Level 1 compliance with advanced fraud protection</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>Developer Support</h4>
+                            <p>Access to documentation, SDKs, and developer community</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-stats">
+                        <div class="stat">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">Developers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">$2B+</span>
+                            <span class="stat-label">Processed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Steps -->
+    <section class="quick-start-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quick Start Guide</h2>
+                <p class="section-description">
+                    Follow these simple steps to start processing payments
+                </p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Account</h3>
+                        <p>Sign up with your email and create a secure password. No credit card required for testing.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Get API Keys</h3>
+                        <p>Access your dashboard and copy your test API keys to start building your integration.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Install SDK</h3>
+                        <p>Choose your preferred language and install the DGS-Pay SDK using npm, pip, or composer.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Make First Payment</h3>
+                        <p>Process your first test payment using our sample code and test card numbers.</p>
+                    </div>
+                </div>
+                
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Go Live</h3>
+                        <p>Switch to live mode, add your bank account, and start accepting real payments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Examples -->
+    <section class="integration-examples">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Integration Examples</h2>
+                <p class="section-description">
+                    See how easy it is to integrate DGS-Pay into your application
+                </p>
+            </div>
+            
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3>E-commerce Store</h3>
+                        <div class="integration-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="integration-preview">
+                        <pre><code>// Initialize DGS-Pay
+const dgsPay = new DGSPay('sk_test_...');
+
+// Create payment form
+const paymentForm = DGSPay.createForm({
+  style: {
+    base: {
+      fontSize: '16px',
+      color: '#424770',
+      '::placeholder': {
+        color: '#aab7c4',
+      },
+    },
+  },
+});
+
+// Mount form
+paymentForm.mount('#payment-element');
+
+// Handle payment
+document.getElementById('submit').addEventListener('click', async (e) => {
+  e.preventDefault();
+  
+  const {error} = await dgsPay.confirmPayment({
+    elements,
+    confirmParams: {
+      return_url: `${window.location.origin}/success`,
+    },
+  });
+});</code></pre>
+                    </div>
+                    <div class="integration-footer">
+                        <a href="/docs" class="btn-secondary">View Full Example</a>
+                    </div>
+                </div>
+                
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3>SaaS Subscription</h3>
+                        <div class="integration-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Subscriptions</span>
+                        </div>
+                    </div>
+                    <div class="integration-preview">
+                        <pre><code>import dgs_pay
+
+# Initialize client
+dgs = dgs_pay.Client(api_key="sk_test_...")
+
+# Create customer
+customer = dgs.customers.create(
+    email="customer@example.com",
+    name="John Doe"
+)
+
+# Create subscription
+subscription = dgs.subscriptions.create(
+    customer=customer.id,
+    items=[{
+        "price": "price_1234567890",
+        "quantity": 1
+    }],
+    payment_behavior="default_incomplete"
+)
+
+# Confirm payment
+payment_intent = dgs.payment_intents.retrieve(
+    subscription.latest_invoice.payment_intent
+)</code></pre>
+                    </div>
+                    <div class="integration-footer">
+                        <a href="/docs" class="btn-secondary">View Full Example</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">
+                    Everything you need to know about getting started with DGS-Pay
+                </p>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">Is there a free trial?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            Yes! You can create a free account and start testing immediately. No credit card required for test mode. 
+                            You only pay when you start processing real payments in live mode.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">How quickly can I start processing payments?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            You can start building your integration immediately after account creation. Most developers have their 
+                            first payment working within hours. To go live with real payments, you'll need to complete our onboarding 
+                            process and verification, which typically takes 1-2 business days.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">What programming languages do you support?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            We have official SDKs for JavaScript, Python, PHP, Ruby, Java, .NET, Go, and more. Our API is also 
+                            RESTful, so you can use any programming language that can make HTTP requests.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">Do you provide test card numbers?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            Yes! We provide comprehensive test card numbers for different scenarios including successful payments, 
+                            declined cards, 3D Secure authentication, and more. Check our documentation for the complete list.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">What kind of support do you offer?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            All accounts include access to our comprehensive documentation, code examples, and community forums. 
+                            Professional and Enterprise plans include priority email support, and Enterprise customers get 
+                            dedicated account management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/logo.svg" alt="DGS-Pay">
+                        <span>DGS-Pay</span>
+                    </div>
+                    <p class="footer-description">
+                        The modern payment gateway for developers and businesses worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Product</h4>
+                        <a href="/payments.html" class="footer-link">Payments</a>
+                        <a href="/subscriptions.html" class="footer-link">Subscriptions</a>
+                        <a href="/invoicing.html" class="footer-link">Invoicing</a>
+                        <a href="/analytics.html" class="footer-link">Analytics</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Developers</h4>
+                        <a href="/docs" class="footer-link">Documentation</a>
+                        <a href="/docs/api" class="footer-link">API Reference</a>
+                        <a href="/docs/guides" class="footer-link">Guides</a>
+                        <a href="/docs/sdk" class="footer-link">SDKs</a>
+                        <a href="/docs/examples" class="footer-link">Examples</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="/about.html" class="footer-link">About Us</a>
+                        <a href="/careers.html" class="footer-link">Careers</a>
+                        <a href="/blog.html" class="footer-link">Blog</a>
+                        <a href="/contact.html" class="footer-link">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Resources</h4>
+                        <a href="/help.html" class="footer-link">Help Center</a>
+                        <a href="/status.html" class="footer-link">Status Page</a>
+                        <a href="/security.html" class="footer-link">Security</a>
+                        <a href="/compliance.html" class="footer-link">Compliance</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                    <a href="/cookies.html">Cookie Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 DGS-Pay. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="/" class="mobile-bottom-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="/pricing.html" class="mobile-bottom-link">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Pricing</span>
+        </a>
+        <a href="/docs" class="mobile-bottom-link">
+            <i class="fas fa-book"></i>
+            <span>Docs</span>
+        </a>
+        <a href="/get-started.html" class="mobile-bottom-link active">
+            <i class="fas fa-rocket"></i>
+            <span>Get Started</span>
+        </a>
+        <a href="/login.html" class="mobile-bottom-link">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="/js/animations.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/get-started.js"></script>
+</body>
+</html>
