@@ -1,1 +1,618 @@
-<h1>Hello HTML</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGS-Pay - Secure, Fast, Global Payment Gateway</title>
+    <meta name="description" content="DGS-Pay is the modern payment gateway for developers and businesses. Secure, fast, and global payment processing with developer-friendly APIs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/components.css">
+    <link rel="stylesheet" href="/public/css/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading DGS-Pay...</p>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="/images/logo.svg" alt="DGS-Pay" class="logo">
+                <span class="brand-text">DGS-Pay</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu desktop-nav">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/payments.html" class="dropdown-item">Payments</a>
+                        <a href="/subscriptions.html" class="dropdown-item">Subscriptions</a>
+                        <a href="/invoicing.html" class="dropdown-item">Invoicing</a>
+                        <a href="/analytics.html" class="dropdown-item">Analytics</a>
+                    </div>
+                </div>
+                
+                <div class="nav-item dropdown">
+                    <a href="/docs" class="nav-link">Docs <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/docs/api" class="dropdown-item">API Reference</a>
+                        <a href="/docs/guides" class="dropdown-item">Guides</a>
+                        <a href="/docs/sdk" class="dropdown-item">SDKs</a>
+                        <a href="/docs/examples" class="dropdown-item">Examples</a>
+                    </div>
+                </div>
+                
+                <a href="/pricing.html" class="nav-link">Pricing</a>
+                <a href="/why-dgs-pay.html" class="nav-link">Why DGS-Pay</a>
+                <a href="/about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions desktop-nav">
+                <a href="/login.html" class="btn-secondary">Login</a>
+                <a href="/get-started.html" class="btn-primary">Get Started</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-content">
+                <a href="/" class="mobile-nav-link active">Home</a>
+                <a href="/pricing.html" class="mobile-nav-link">Pricing</a>
+                <a href="/docs" class="mobile-nav-link">Documentation</a>
+                <a href="/get-started.html" class="mobile-nav-link">Get Started</a>
+                <a href="/login.html" class="mobile-nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">🚀 Now in Beta - Early Access Available</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    The Future of
+                    <span class="gradient-text">Payment Processing</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Experience lightning-fast, ultra-secure payment processing with developer-friendly APIs. 
+                    Built for scale, designed for the future of fintech.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="/get-started.html" class="btn-primary large">
+                        <span>Start Building</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="/docs" class="btn-secondary large">
+                        <i class="fas fa-book"></i>
+                        <span>View Documentation</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">&lt;100ms</span>
+                        <span class="stat-label">Response Time</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="payment-cards" id="payment-cards">
+                    <div class="payment-card card-1">
+                        <div class="card-header">
+                            <div class="card-type">VISA</div>
+                            <div class="card-chip"></div>
+                        </div>
+                        <div class="card-number">•••• •••• •••• 4242</div>
+                        <div class="card-footer">
+                            <span>VALID THRU 12/25</span>
+                            <span>JOHN DOE</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-card card-2">
+                        <div class="card-header">
+                            <div class="card-type">MASTERCARD</div>
+                            <div class="card-chip"></div>
+                        </div>
+                        <div class="card-number">•••• •••• •••• 8888</div>
+                        <div class="card-footer">
+                            <span>VALID THRU 08/26</span>
+                            <span>JANE SMITH</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-card card-3">
+                        <div class="card-header">
+                            <div class="card-type">AMEX</div>
+                            <div class="card-chip"></div>
+                        </div>
+                        <div class="card-number">•••• •••••• •••• 1234</div>
+                        <div class="card-footer">
+                            <span>VALID THRU 03/27</span>
+                            <span>MIKE JOHNSON</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="floating-elements">
+                    <div class="floating-element element-1">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure</span>
+                    </div>
+                    <div class="floating-element element-2">
+                        <i class="fas fa-bolt"></i>
+                        <span>Fast</span>
+                    </div>
+                    <div class="floating-element element-3">
+                        <i class="fas fa-globe"></i>
+                        <span>Global</span>
+                    </div>
+                    <div class="floating-element element-4">
+                        <i class="fas fa-code"></i>
+                        <span>API-First</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="container">
+            <p class="trust-text">Trusted by 10,000+ developers worldwide</p>
+            <div class="trust-logos">
+                <div class="trust-logo">TechCorp</div>
+                <div class="trust-logo">StartupXYZ</div>
+                <div class="trust-logo">EcommPlus</div>
+                <div class="trust-logo">FinTech Inc</div>
+                <div class="trust-logo">GlobalPay</div>
+                <div class="trust-logo">SecureBank</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose DGS-Pay?</h2>
+                <p class="section-description">
+                    Built for the modern web with enterprise-grade security and developer experience in mind.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-description">
+                        Sub-100ms response times with edge computing and global CDN. Process payments faster than ever before.
+                    </p>
+                    <div class="feature-highlight">99.9% uptime SLA</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Bank-Level Security</h3>
+                    <p class="feature-description">
+                        PCI DSS Level 1 compliant with end-to-end encryption, tokenization, and fraud detection.
+                    </p>
+                    <div class="feature-highlight">SOC 2 Type II certified</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="feature-title">Global Reach</h3>
+                    <p class="feature-description">
+                        Accept payments in 150+ countries with 135+ currencies and local payment methods.
+                    </p>
+                    <div class="feature-highlight">135+ currencies supported</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="feature-title">Developer-First</h3>
+                    <p class="feature-description">
+                        Clean APIs, comprehensive documentation, and SDKs for your favorite programming languages.
+                    </p>
+                    <div class="feature-highlight">10+ SDKs available</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Advanced Analytics</h3>
+                    <p class="feature-description">
+                        Real-time insights, custom dashboards, and detailed reporting for your payment data.
+                    </p>
+                    <div class="feature-highlight">Real-time dashboards</div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Mobile Optimized</h3>
+                    <p class="feature-description">
+                        Perfect mobile checkout experience with Apple Pay, Google Pay, and mobile wallets.
+                    </p>
+                    <div class="feature-highlight">Native mobile SDKs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Preview Section -->
+    <section class="code-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple. Powerful. API-First.</h2>
+                <p class="section-description">
+                    Get started in minutes with our clean, well-documented API.
+                </p>
+            </div>
+            
+            <div class="code-demo">
+                <div class="code-tabs">
+                    <button class="code-tab active" data-lang="curl">cURL</button>
+                    <button class="code-tab" data-lang="javascript">JavaScript</button>
+                    <button class="code-tab" data-lang="python">Python</button>
+                    <button class="code-tab" data-lang="php">PHP</button>
+                </div>
+                
+                <div class="code-content">
+                    <pre class="code-block active" data-lang="curl"><code>curl -X POST https://api.dgs-pay.com/v1/payments \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "amount": 2500,
+    "currency": "USD",
+    "description": "Premium Subscription",
+    "payment_method": "card",
+    "card": {
+      "number": "4242424242424242",
+      "exp_month": 12,
+      "exp_year": 2025,
+      "cvc": "123"
+    }
+  }'</code></pre>
+                    
+                    <pre class="code-block" data-lang="javascript"><code>const response = await fetch('https://api.dgs-pay.com/v1/payments', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    amount: 2500,
+    currency: 'USD',
+    description: 'Premium Subscription',
+    payment_method: 'card',
+    card: {
+      number: '4242424242424242',
+      exp_month: 12,
+      exp_year: 2025,
+      cvc: '123'
+    }
+  })
+});
+
+const payment = await response.json();</code></pre>
+                    
+                    <pre class="code-block" data-lang="python"><code>import requests
+
+url = "https://api.dgs-pay.com/v1/payments"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+data = {
+    "amount": 2500,
+    "currency": "USD",
+    "description": "Premium Subscription",
+    "payment_method": "card",
+    "card": {
+        "number": "4242424242424242",
+        "exp_month": 12,
+        "exp_year": 2025,
+        "cvc": "123"
+    }
+}
+
+response = requests.post(url, headers=headers, json=data)
+payment = response.json()</code></pre>
+                    
+                    <pre class="code-block" data-lang="php"><code>&lt;?php
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, 'https://api.dgs-pay.com/v1/payments');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
+    'amount' => 2500,
+    'currency' => 'USD',
+    'description' => 'Premium Subscription',
+    'payment_method' => 'card',
+    'card' => [
+        'number' => '4242424242424242',
+        'exp_month' => 12,
+        'exp_year' => 2025,
+        'cvc' => '123'
+    ]
+]));
+
+$headers = [
+    'Authorization: Bearer YOUR_API_KEY',
+    'Content-Type: application/json'
+];
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+$response = curl_exec($ch);
+$payment = json_decode($response);</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Loved by Developers</h2>
+                <p class="section-description">
+                    See what developers around the world are saying about DGS-Pay.
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "DGS-Pay transformed our payment processing. The API is clean, the documentation is excellent, and the support team is incredibly responsive."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/images/avatar-1.jpg" alt="Sarah Chen" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Sarah Chen</div>
+                            <div class="author-role">CTO, TechFlow</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "We switched from Stripe to DGS-Pay and never looked back. The fees are lower, the performance is better, and the developer experience is top-notch."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/public/images/avatar-2.jpg" alt="Marcus Johnson" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Marcus Johnson</div>
+                            <div class="author-role">Lead Developer, EcommPlus</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "The mobile SDKs are incredible. We went from no mobile payments to supporting Apple Pay and Google Pay in just two days."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/public/images/avatar-3.jpg" alt="Elena Rodriguez" class="author-avatar">
+                        <div class="author-info">
+                            <div class="author-name">Elena Rodriguez</div>
+                            <div class="author-role">Mobile Developer, FinTech Startup</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Payments?</h2>
+                <p class="cta-description">
+                    Join thousands of developers who trust DGS-Pay for their payment processing needs.
+                </p>
+                <div class="cta-actions">
+                    <a href="/get-started.html" class="btn-primary large">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="/contact.html" class="btn-secondary large">
+                        <span>Talk to Sales</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/logo.svg" alt="DGS-Pay">
+                        <span>DGS-Pay</span>
+                    </div>
+                    <p class="footer-description">
+                        The modern payment gateway for developers and businesses worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Product</h4>
+                        <a href="/payments.html" class="footer-link">Payments</a>
+                        <a href="/subscriptions.html" class="footer-link">Subscriptions</a>
+                        <a href="/invoicing.html" class="footer-link">Invoicing</a>
+                        <a href="/analytics.html" class="footer-link">Analytics</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Developers</h4>
+                        <a href="/docs" class="footer-link">Documentation</a>
+                        <a href="/docs/api" class="footer-link">API Reference</a>
+                        <a href="/docs/guides" class="footer-link">Guides</a>
+                        <a href="/docs/sdk" class="footer-link">SDKs</a>
+                        <a href="/docs/examples" class="footer-link">Examples</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="/about.html" class="footer-link">About Us</a>
+                        <a href="/careers.html" class="footer-link">Careers</a>
+                        <a href="/blog.html" class="footer-link">Blog</a>
+                        <a href="/contact.html" class="footer-link">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Resources</h4>
+                        <a href="/help.html" class="footer-link">Help Center</a>
+                        <a href="/status.html" class="footer-link">Status Page</a>
+                        <a href="/security.html" class="footer-link">Security</a>
+                        <a href="/compliance.html" class="footer-link">Compliance</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                    <a href="/cookies.html">Cookie Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 DGS-Pay. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="/" class="mobile-bottom-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="/pricing.html" class="mobile-bottom-link">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Pricing</span>
+        </a>
+        <a href="/docs" class="mobile-bottom-link">
+            <i class="fas fa-book"></i>
+            <span>Docs</span>
+        </a>
+        <a href="/get-started.html" class="mobile-bottom-link">
+            <i class="fas fa-rocket"></i>
+            <span>Get Started</span>
+        </a>
+        <a href="/login.html" class="mobile-bottom-link">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="/public/js/animations.js"></script>
+    <script src="/public/js/main.js"></script>
+</body>
+</html>
