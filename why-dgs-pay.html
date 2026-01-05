@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why DGS-Pay - The Modern Payment Gateway</title>
+    <meta name="description" content="Discover why DGS-Pay is the preferred payment gateway for developers. Superior pricing, better APIs, faster support, and modern features.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading DGS-Pay...</p>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="/images/logo.svg" alt="DGS-Pay" class="logo">
+                <span class="brand-text">DGS-Pay</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/pricing.html" class="nav-link">Pricing</a>
+                <a href="/docs" class="nav-link">Docs</a>
+                <a href="/why-dgs-pay.html" class="nav-link active">Why DGS-Pay</a>
+                <a href="/about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions desktop-nav">
+                <a href="/login.html" class="btn-secondary">Login</a>
+                <a href="/get-started.html" class="btn-primary">Get Started</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-content">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="/pricing.html" class="mobile-nav-link">Pricing</a>
+                <a href="/docs" class="mobile-nav-link">Documentation</a>
+                <a href="/why-dgs-pay.html" class="mobile-nav-link active">Why DGS-Pay</a>
+                <a href="/about.html" class="mobile-nav-link">About</a>
+                <a href="/login.html" class="mobile-nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-compact">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Why Choose
+                    <span class="gradient-text">DGS-Pay?</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Built by developers, for developers. Experience the next generation of payment processing 
+                    with superior technology, transparent pricing, and unmatched support.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Advantages -->
+    <section class="competitive-advantages">
+        <div class="container">
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Lower Fees</h3>
+                    <p>Save up to 40% on processing fees compared to industry leaders like Stripe and PayPal.</p>
+                    <div class="advantage-highlight">Starting at 2.2% + $0.20</div>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Faster Processing</h3>
+                    <p>Lightning-fast payment processing with sub-100ms response times worldwide.</p>
+                    <div class="advantage-highlight">99.99% uptime guarantee</div>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Developer Experience</h3>
+                    <p>Clean, intuitive APIs designed for modern applications with comprehensive documentation.</p>
+                    <div class="advantage-highlight">10+ SDKs available</div>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Real human support when you need it, not just automated responses or endless forms.</p>
+                    <div class="advantage-highlight">< 2 hour response time</div>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Advanced Security</h3>
+                    <p>Bank-level security with AI-powered fraud detection and compliance automation.</p>
+                    <div class="advantage-highlight">PCI DSS Level 1 certified</div>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Reach</h3>
+                    <p>Accept payments in 150+ countries with local payment methods and currencies.</p>
+                    <div class="advantage-highlight">135+ currencies supported</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">DGS-Pay vs. Competition</h2>
+                <p class="section-description">
+                    See how we stack up against other payment processors
+                </p>
+            </div>
+            
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-feature">Features</div>
+                    <div class="comparison-provider">DGS-Pay</div>
+                    <div class="comparison-provider">Stripe</div>
+                    <div class="comparison-provider">PayPal</div>
+                    <div class="comparison-provider">Square</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Online Processing Fee</div>
+                    <div class="comparison-value">2.5%</div>
+                    <div class="comparison-value">2.9%</div>
+                    <div class="comparison-value">2.9%</div>
+                    <div class="comparison-value">2.6%</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">API Response Time</div>
+                    <div class="comparison-value">< 100ms</div>
+                    <div class="comparison-value">~200ms</div>
+                    <div class="comparison-value">~300ms</div>
+                    <div class="comparison-value">~250ms</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Support Response Time</div>
+                    <div class="comparison-value">< 2 hours</div>
+                    <div class="comparison-value">24-48 hours</div>
+                    <div class="comparison-value">3-5 days</div>
+                    <div class="comparison-value">24-48 hours</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">SDKs Available</div>
+                    <div class="comparison-value">15+</div>
+                    <div class="comparison-value">10+</div>
+                    <div class="comparison-value">8+</div>
+                    <div class="comparison-value">6+</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">AI Fraud Detection</div>
+                    <div class="comparison-value">Advanced</div>
+                    <div class="comparison-value">Basic</div>
+                    <div class="comparison-value">Basic</div>
+                    <div class="comparison-value">Basic</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Real-time Analytics</div>
+                    <div class="comparison-value">✅</div>
+                    <div class="comparison-value">✅</div>
+                    <div class="comparison-value">❌</div>
+                    <div class="comparison-value">✅</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Custom Webhooks</div>
+                    <div class="comparison-value">✅</div>
+                    <div class="comparison-value">✅</div>
+                    <div class="comparison-value">❌</div>
+                    <div class="comparison-value">✅</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">White-label Solutions</div>
+                    <div class="comparison-value">✅</div>
+                    <div class="comparison-value">Enterprise only</div>
+                    <div class="comparison-value">❌</div>
+                    <div class="comparison-value">❌</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built with Modern Technology</h2>
+                <p class="section-description">
+                    Our platform is built on cutting-edge technology for maximum reliability and performance
+                </p>
+            </div>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h4>Cloud Infrastructure</h4>
+                    <p>Built on AWS with global edge locations for maximum performance</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Database Technology</h4>
+                    <p>Multi-region database replication with automatic failover</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Machine Learning</h4>
+                    <p>AI-powered fraud detection and payment optimization</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4>Security First</h4>
+                    <p>End-to-end encryption and compliance automation</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h4>High Performance</h4>
+                    <p>Auto-scaling infrastructure that grows with your business</p>
+                </div>
+                
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Analytics Engine</h4>
+                    <p>Real-time data processing and business intelligence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Stories -->
+    <section class="customer-stories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-description">
+                    Real stories from developers who've made the switch to DGS-Pay
+                </p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-header">
+                            <img src="/images/avatar-1.jpg" alt="Sarah Chen" class="story-avatar">
+                            <div class="story-info">
+                                <h4>Sarah Chen</h4>
+                                <p>CTO at TechFlow</p>
+                            </div>
+                        </div>
+                        <div class="story-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="story-text">
+                            "DGS-Pay reduced our payment processing costs by 35% while improving our approval rates. 
+                            The developer experience is phenomenal - we had our integration working in under 4 hours."
+                        </p>
+                        <div class="story-metrics">
+                            <div class="metric">
+                                <span class="metric-value">35%</span>
+                                <span class="metric-label">Cost Reduction</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">4hrs</span>
+                                <span class="metric-label">Integration Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-header">
+                            <img src="/images/avatar-2.jpg" alt="Marcus Johnson" class="story-avatar">
+                            <div class="story-info">
+                                <h4>Marcus Johnson</h4>
+                                <p>Lead Developer at EcommPlus</p>
+                            </div>
+                        </div>
+                        <div class="story-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="story-text">
+                            "The support team at DGS-Pay is incredible. They helped us migrate from Stripe seamlessly 
+                            and even optimized our payment flow for better conversion rates."
+                        </p>
+                        <div class="story-metrics">
+                            <div class="metric">
+                                <span class="metric-value">99.8%</span>
+                                <span class="metric-label">Approval Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">24/7</span>
+                                <span class="metric-label">Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-header">
+                            <img src="/images/avatar-3.jpg" alt="Elena Rodriguez" class="story-avatar">
+                            <div class="story-info">
+                                <h4>Elena Rodriguez</h4>
+                                <p>Mobile Developer at FinTech Startup</p>
+                            </div>
+                        </div>
+                        <div class="story-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="story-text">
+                            "The mobile SDKs are beautifully designed and incredibly easy to use. We implemented 
+                            Apple Pay and Google Pay support in just 2 days. Game changer for our mobile app."
+                        </p>
+                        <div class="story-metrics">
+                            <div class="metric">
+                                <span class="metric-value">2 days</span>
+                                <span class="metric-label">Mobile Integration</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">50%</span>
+                                <span class="metric-label">Conversion Increase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="awards-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Awards & Recognition</h2>
+                <p class="section-description">
+                    Recognized by industry leaders for innovation and excellence
+                </p>
+            </div>
+            
+            <div class="awards-grid">
+                <div class="award-item">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Best Developer Experience 2024</h4>
+                    <p>DeveloperWeek Awards</p>
+                </div>
+                
+                <div class="award-item">
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h4>Top Payment Innovation</h4>
+                    <p>FinTech Breakthrough Awards</p>
+                </div>
+                
+                <div class="award-item">
+                    <div class="award-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Highest Rated API</h4>
+                    <p>API World Conference</p>
+                </div>
+                
+                <div class="award-item">
+                    <div class="award-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Security Excellence</h4>
+                    <p>Cybersecurity Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Experience the Difference?</h2>
+                <p class="cta-description">
+                    Join thousands of developers who've already made the switch to DGS-Pay.
+                </p>
+                <div class="cta-actions">
+                    <a href="/get-started.html" class="btn-primary large">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="/contact.html" class="btn-secondary large">
+                        <span>Talk to Sales</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/logo.svg" alt="DGS-Pay">
+                        <span>DGS-Pay</span>
+                    </div>
+                    <p class="footer-description">
+                        The modern payment gateway for developers and businesses worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Product</h4>
+                        <a href="/payments.html" class="footer-link">Payments</a>
+                        <a href="/subscriptions.html" class="footer-link">Subscriptions</a>
+                        <a href="/invoicing.html" class="footer-link">Invoicing</a>
+                        <a href="/analytics.html" class="footer-link">Analytics</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Developers</h4>
+                        <a href="/docs" class="footer-link">Documentation</a>
+                        <a href="/docs/api" class="footer-link">API Reference</a>
+                        <a href="/docs/guides" class="footer-link">Guides</a>
+                        <a href="/docs/sdk" class="footer-link">SDKs</a>
+                        <a href="/docs/examples" class="footer-link">Examples</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="/about.html" class="footer-link">About Us</a>
+                        <a href="/careers.html" class="footer-link">Careers</a>
+                        <a href="/blog.html" class="footer-link">Blog</a>
+                        <a href="/contact.html" class="footer-link">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Resources</h4>
+                        <a href="/help.html" class="footer-link">Help Center</a>
+                        <a href="/status.html" class="footer-link">Status Page</a>
+                        <a href="/security.html" class="footer-link">Security</a>
+                        <a href="/compliance.html" class="footer-link">Compliance</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                    <a href="/cookies.html">Cookie Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 DGS-Pay. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="/" class="mobile-bottom-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="/pricing.html" class="mobile-bottom-link">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Pricing</span>
+        </a>
+        <a href="/docs" class="mobile-bottom-link">
+            <i class="fas fa-book"></i>
+            <span>Docs</span>
+        </a>
+        <a href="/get-started.html" class="mobile-bottom-link">
+            <i class="fas fa-rocket"></i>
+            <span>Get Started</span>
+        </a>
+        <a href="/login.html" class="mobile-bottom-link">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="/js/animations.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/why-dgs-pay.js"></script>
+</body>
+</html>

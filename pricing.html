@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - DGS-Pay</title>
+    <meta name="description" content="Transparent pricing for DGS-Pay payment gateway. Choose the perfect plan for your business with competitive transaction fees.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading DGS-Pay...</p>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="/images/logo.svg" alt="DGS-Pay" class="logo">
+                <span class="brand-text">DGS-Pay</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu desktop-nav">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/payments.html" class="dropdown-item">Payments</a>
+                        <a href="/subscriptions.html" class="dropdown-item">Subscriptions</a>
+                        <a href="/invoicing.html" class="dropdown-item">Invoicing</a>
+                        <a href="/analytics.html" class="dropdown-item">Analytics</a>
+                    </div>
+                </div>
+                
+                <div class="nav-item dropdown">
+                    <a href="/docs" class="nav-link">Docs <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="/docs/api" class="dropdown-item">API Reference</a>
+                        <a href="/docs/guides" class="dropdown-item">Guides</a>
+                        <a href="/docs/sdk" class="dropdown-item">SDKs</a>
+                        <a href="/docs/examples" class="dropdown-item">Examples</a>
+                    </div>
+                </div>
+                
+                <a href="/pricing.html" class="nav-link active">Pricing</a>
+                <a href="/why-dgs-pay.html" class="nav-link">Why DGS-Pay</a>
+                <a href="/about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions desktop-nav">
+                <a href="/login.html" class="btn-secondary">Login</a>
+                <a href="/get-started.html" class="btn-primary">Get Started</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-content">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="/pricing.html" class="mobile-nav-link active">Pricing</a>
+                <a href="/docs" class="mobile-nav-link">Documentation</a>
+                <a href="/get-started.html" class="mobile-nav-link">Get Started</a>
+                <a href="/login.html" class="mobile-nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-compact">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Simple, Transparent
+                    <span class="gradient-text">Pricing</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Pay only for what you use with no hidden fees. Start free and scale as you grow.
+                </p>
+                
+                <div class="pricing-toggle">
+                    <span class="toggle-label">Monthly</span>
+                    <label class="switch">
+                        <input type="checkbox" id="pricing-toggle">
+                        <span class="switch-slider"></span>
+                    </label>
+                    <span class="toggle-label">Annual <span class="discount-badge">Save 20%</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter</h3>
+                        <p class="pricing-subtitle">Perfect for getting started</p>
+                        <div class="pricing-price">
+                            <span class="pricing-amount">2.9%</span>
+                            <span class="pricing-period">+ $0.30 per transaction</span>
+                        </div>
+                        <p class="pricing-description">Best for small businesses and personal projects</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to $10,000/month volume</li>
+                        <li><i class="fas fa-check"></i> All major payment methods</li>
+                        <li><i class="fas fa-check"></i> Basic analytics dashboard</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> PCI compliance</li>
+                        <li><i class="fas fa-check"></i> Standard API rate limits</li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="/get-started.html" class="btn-secondary">Start Free Trial</a>
+                    </div>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Professional</h3>
+                        <p class="pricing-subtitle">Most popular choice</p>
+                        <div class="pricing-price">
+                            <span class="pricing-amount">2.5%</span>
+                            <span class="pricing-period">+ $0.25 per transaction</span>
+                        </div>
+                        <p class="pricing-description">For growing businesses and startups</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Up to $100,000/month volume</li>
+                        <li><i class="fas fa-check"></i> All payment methods + local options</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics & reporting</li>
+                        <li><i class="fas fa-check"></i> Priority support (24/7)</li>
+                        <li><i class="fas fa-check"></i> Custom webhooks</li>
+                        <li><i class="fas fa-check"></i> Higher API rate limits</li>
+                        <li><i class="fas fa-check"></i> Multi-currency support</li>
+                        <li><i class="fas fa-check"></i> Fraud detection tools</li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="/get-started.html" class="btn-primary">Start Free Trial</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <p class="pricing-subtitle">For large-scale operations</p>
+                        <div class="pricing-price">
+                            <span class="pricing-amount">2.2%</span>
+                            <span class="pricing-period">+ $0.20 per transaction</span>
+                        </div>
+                        <p class="pricing-description">Custom solutions for enterprise needs</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited transaction volume</li>
+                        <li><i class="fas fa-check"></i> All payment methods worldwide</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> SLA guarantees (99.99% uptime)</li>
+                        <li><i class="fas fa-check"></i> White-label solutions</li>
+                        <li><i class="fas fa-check"></i> Advanced fraud protection</li>
+                        <li><i class="fas fa-check"></i> Custom reporting & analytics</li>
+                        <li><i class="fas fa-check"></i> Multi-tenant architecture</li>
+                    </ul>
+                    
+                    <div class="pricing-cta">
+                        <a href="/contact.html" class="btn-secondary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Comparison -->
+    <section class="fee-comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How We Compare</h2>
+                <p class="section-description">
+                    See how DGS-Pay stacks up against other payment processors
+                </p>
+            </div>
+            
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-feature">Features</div>
+                    <div class="comparison-provider">DGS-Pay</div>
+                    <div class="comparison-provider">Stripe</div>
+                    <div class="comparison-provider">PayPal</div>
+                    <div class="comparison-provider">Square</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Online Payments</div>
+                    <div class="comparison-value">2.5%</div>
+                    <div class="comparison-value">2.9%</div>
+                    <div class="comparison-value">2.9%</div>
+                    <div class="comparison-value">2.6%</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">In-Person Payments</div>
+                    <div class="comparison-value">2.2%</div>
+                    <div class="comparison-value">2.7%</div>
+                    <div class="comparison-value">2.7%</div>
+                    <div class="comparison-value">2.6%</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">International Cards</div>
+                    <div class="comparison-value">+1%</div>
+                    <div class="comparison-value">+1%</div>
+                    <div class="comparison-value">+1.5%</div>
+                    <div class="comparison-value">+2.5%</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Chargeback Fee</div>
+                    <div class="comparison-value">$15</div>
+                    <div class="comparison-value">$15</div>
+                    <div class="comparison-value">$20</div>
+                    <div class="comparison-value">$25</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Setup Fees</div>
+                    <div class="comparison-value">$0</div>
+                    <div class="comparison-value">$0</div>
+                    <div class="comparison-value">$0</div>
+                    <div class="comparison-value">$0</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">Monthly Fees</div>
+                    <div class="comparison-value">$0</div>
+                    <div class="comparison-value">$0</div>
+                    <div class="comparison-value">$0</div>
+                    <div class="comparison-value">$60</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-feature">API Uptime</div>
+                    <div class="comparison-value">99.99%</div>
+                    <div class="comparison-value">99.99%</div>
+                    <div class="comparison-value">99.95%</div>
+                    <div class="comparison-value">99.9%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">
+                    Everything you need to know about our pricing and features
+                </p>
+            </div>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">Are there any setup or monthly fees?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            No, there are no setup fees, monthly fees, or hidden costs. You only pay for successful transactions. 
+                            We believe in transparent pricing that grows with your business.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">What payment methods do you support?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            We support all major credit and debit cards (Visa, Mastercard, American Express, Discover), 
+                            digital wallets (Apple Pay, Google Pay, Samsung Pay), bank transfers, and local payment methods 
+                            specific to each region.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">How does your fraud protection work?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            Our AI-powered fraud detection system analyzes every transaction in real-time, using machine learning 
+                            to identify suspicious patterns. This helps reduce chargebacks while maintaining a high approval rate 
+                            for legitimate transactions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">Can I switch plans anytime?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, 
+                            and we'll prorate any billing differences. You can also use different plans for different businesses.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">What kind of support do you provide?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            All plans include email support. Professional plans get 24/7 priority support with faster response times. 
+                            Enterprise customers receive dedicated account management and phone support. We also have extensive 
+                            documentation and community forums.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4 class="accordion-title">Is my data secure with DGS-Pay?</h4>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="accordion-description">
+                            Absolutely. We're PCI DSS Level 1 certified and use bank-level encryption. We never store sensitive 
+                            card data on our servers and comply with all major security standards including SOC 2 Type II, 
+                            GDPR, and CCPA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-description">
+                    Join thousands of businesses using DGS-Pay to process payments securely and efficiently.
+                </p>
+                <div class="cta-actions">
+                    <a href="/get-started.html" class="btn-primary large">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="/contact.html" class="btn-secondary large">
+                        <span>Talk to Sales</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/logo.svg" alt="DGS-Pay">
+                        <span>DGS-Pay</span>
+                    </div>
+                    <p class="footer-description">
+                        The modern payment gateway for developers and businesses worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Product</h4>
+                        <a href="/payments.html" class="footer-link">Payments</a>
+                        <a href="/subscriptions.html" class="footer-link">Subscriptions</a>
+                        <a href="/invoicing.html" class="footer-link">Invoicing</a>
+                        <a href="/analytics.html" class="footer-link">Analytics</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Developers</h4>
+                        <a href="/docs" class="footer-link">Documentation</a>
+                        <a href="/docs/api" class="footer-link">API Reference</a>
+                        <a href="/docs/guides" class="footer-link">Guides</a>
+                        <a href="/docs/sdk" class="footer-link">SDKs</a>
+                        <a href="/docs/examples" class="footer-link">Examples</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Company</h4>
+                        <a href="/about.html" class="footer-link">About Us</a>
+                        <a href="/careers.html" class="footer-link">Careers</a>
+                        <a href="/blog.html" class="footer-link">Blog</a>
+                        <a href="/contact.html" class="footer-link">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Resources</h4>
+                        <a href="/help.html" class="footer-link">Help Center</a>
+                        <a href="/status.html" class="footer-link">Status Page</a>
+                        <a href="/security.html" class="footer-link">Security</a>
+                        <a href="/compliance.html" class="footer-link">Compliance</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                    <a href="/cookies.html">Cookie Policy</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2024 DGS-Pay. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="/" class="mobile-bottom-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="/pricing.html" class="mobile-bottom-link active">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Pricing</span>
+        </a>
+        <a href="/docs" class="mobile-bottom-link">
+            <i class="fas fa-book"></i>
+            <span>Docs</span>
+        </a>
+        <a href="/get-started.html" class="mobile-bottom-link">
+            <i class="fas fa-rocket"></i>
+            <span>Get Started</span>
+        </a>
+        <a href="/login.html" class="mobile-bottom-link">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="/js/animations.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/pricing.js"></script>
+</body>
+</html>

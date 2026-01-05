@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - DGS-Pay API Reference & Guides</title>
+    <meta name="description" content="Comprehensive DGS-Pay API documentation, guides, and examples. Build payment integrations with our developer-friendly API and SDKs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/docs.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading DGS-Pay...</p>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar docs-navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="/images/logo.svg" alt="DGS-Pay" class="logo">
+                <span class="brand-text">DGS-Pay</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/pricing.html" class="nav-link">Pricing</a>
+                <div class="nav-item dropdown">
+                    <a href="/docs" class="nav-link active">Docs <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#getting-started" class="dropdown-item">Getting Started</a>
+                        <a href="#api-reference" class="dropdown-item">API Reference</a>
+                        <a href="#sdks" class="dropdown-item">SDKs</a>
+                        <a href="#guides" class="dropdown-item">Guides</a>
+                    </div>
+                </div>
+                <a href="/why-dgs-pay.html" class="nav-link">Why DGS-Pay</a>
+                <a href="/about.html" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions desktop-nav">
+                <a href="/login.html" class="btn-secondary">Login</a>
+                <a href="/get-started.html" class="btn-primary">Get Started</a>
+            </div>
+            
+            <!-- Search -->
+            <div class="docs-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search docs..." id="docs-search">
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Layout -->
+    <div class="docs-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="docs-sidebar" id="docs-sidebar">
+            <div class="sidebar-header">
+                <h3>Documentation</h3>
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h4 class="nav-section-title">Getting Started</h4>
+                    <a href="#quickstart" class="nav-link active">
+                        <i class="fas fa-rocket"></i>
+                        Quick Start
+                    </a>
+                    <a href="#authentication" class="nav-link">
+                        <i class="fas fa-key"></i>
+                        Authentication
+                    </a>
+                    <a href="#webhooks" class="nav-link">
+                        <i class="fas fa-exchange-alt"></i>
+                        Webhooks
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h4 class="nav-section-title">API Reference</h4>
+                    <a href="#payments" class="nav-link">
+                        <i class="fas fa-credit-card"></i>
+                        Payments
+                    </a>
+                    <a href="#customers" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        Customers
+                    </a>
+                    <a href="#subscriptions" class="nav-link">
+                        <i class="fas fa-sync"></i>
+                        Subscriptions
+                    </a>
+                    <a href="#invoices" class="nav-link">
+                        <i class="fas fa-file-invoice"></i>
+                        Invoices
+                    </a>
+                    <a href="#analytics" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        Analytics
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h4 class="nav-section-title">SDKs</h4>
+                    <a href="#javascript-sdk" class="nav-link">
+                        <i class="fab fa-js"></i>
+                        JavaScript
+                    </a>
+                    <a href="#python-sdk" class="nav-link">
+                        <i class="fab fa-python"></i>
+                        Python
+                    </a>
+                    <a href="#php-sdk" class="nav-link">
+                        <i class="fab fa-php"></i>
+                        PHP
+                    </a>
+                    <a href="#ruby-sdk" class="nav-link">
+                        <i class="fab fa-ruby"></i>
+                        Ruby
+                    </a>
+                </div>
+                
+                <div class="nav-section">
+                    <h4 class="nav-section-title">Guides</h4>
+                    <a href="#accept-payments" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        Accept Payments
+                    </a>
+                    <a href="#subscriptions-guide" class="nav-link">
+                        <i class="fas fa-redo"></i>
+                        Subscriptions
+                    </a>
+                    <a href="#fraud-prevention" class="nav-link">
+                        <i class="fas fa-shield-alt"></i>
+                        Fraud Prevention
+                    </a>
+                    <a href="#international" class="nav-link">
+                        <i class="fas fa-globe"></i>
+                        International
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-main">
+            <div class="docs-content">
+                <!-- Quick Start Section -->
+                <section id="quickstart" class="docs-section">
+                    <h1>Quick Start</h1>
+                    <p class="lead">
+                        Get up and running with DGS-Pay in minutes. This guide will walk you through 
+                        your first payment integration.
+                    </p>
+                    
+                    <div class="alert alert-info">
+                        <div class="alert-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="alert-content">
+                            <div class="alert-title">Beta Access</div>
+                            <div class="alert-message">
+                                DGS-Pay is currently in beta. Contact us for early access to test your integrations.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>1. Create an Account</h2>
+                    <p>
+                        Sign up for a free DGS-Pay account to get your API keys and start testing.
+                    </p>
+                    
+                    <div class="cta-box">
+                        <a href="/get-started.html" class="btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Create Free Account
+                        </a>
+                    </div>
+                    
+                    <h2>2. Install the SDK</h2>
+                    <p>Choose your preferred programming language:</p>
+                    
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-lang="javascript">JavaScript</button>
+                        <button class="code-tab" data-lang="python">Python</button>
+                        <button class="code-tab" data-lang="php">PHP</button>
+                        <button class="code-tab" data-lang="curl">cURL</button>
+                    </div>
+                    
+                    <div class="code-content">
+                        <div class="code-block-wrapper">
+                            <div class="code-header">
+                                <span class="code-language">JavaScript</span>
+                                <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+                            </div>
+                            <div class="code-content">
+                                <pre><code>npm install @dgs-pay/js-sdk
+
+# or with yarn
+yarn add @dgs-pay/js-sdk
+
+# or with CDN
+&lt;script src="https://cdn.dgs-pay.com/js/v1/dgs-pay.min.js"&gt;&lt;/script&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2>3. Make Your First Payment</h2>
+                    <p>
+                        Here's a simple example of processing your first payment:
+                    </p>
+                    
+                    <div class="code-block-wrapper">
+                        <div class="code-header">
+                            <span class="code-language">JavaScript</span>
+                            <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>const DGSPay = require('@dgs-pay/js-sdk');
+
+const dgsPay = new DGSPay('sk_test_your_secret_key');
+
+async function createPayment() {
+  try {
+    const payment = await dgsPay.payments.create({
+      amount: 2500, // $25.00
+      currency: 'usd',
+      source: 'tok_visa',
+      description: 'My First Payment'
+    });
+    
+    console.log('Payment successful!', payment.id);
+  } catch (error) {
+    console.error('Payment failed:', error.message);
+  }
+}
+
+createPayment();</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h3>Next Steps</h3>
+                        <ul>
+                            <li><a href="#authentication">Learn about API authentication</a></li>
+                            <li><a href="#payments">Explore the Payments API</a></li>
+                            <li><a href="#webhooks">Set up webhooks for real-time updates</a></li>
+                            <li><a href="#sdks">Check out our SDKs for your language</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- API Reference Section -->
+                <section id="api-reference" class="docs-section">
+                    <h1>API Reference</h1>
+                    <p class="lead">
+                        Complete reference for all DGS-Pay API endpoints, parameters, and responses.
+                    </p>
+                    
+                    <h2>Base URL</h2>
+                    <p>All API requests are made to the following base URL:</p>
+                    
+                    <div class="endpoint-box">
+                        <code>https://api.dgs-pay.com/v1</code>
+                    </div>
+                    
+                    <h2>Authentication</h2>
+                    <p>
+                        Authenticate requests using your secret API key in the Authorization header:
+                    </p>
+                    
+                    <div class="code-block-wrapper">
+                        <div class="code-header">
+                            <span class="code-language">HTTP Headers</span>
+                            <button class="code-copy-btn" onclick="copyCode(this)">Copy</button>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>Authorization: Bearer sk_test_your_secret_key_here</code></pre>
+                        </div>
+                    </div>
+                    
+                    <h2>Payments</h2>
+                    <p>Create and manage payments.</p>
+                    
+                    <div class="endpoint-docs">
+                        <div class="endpoint">
+                            <div class="endpoint-header">
+                                <span class="method method-post">POST</span>
+                                <span class="endpoint-path">/payments</span>
+                                <span class="endpoint-title">Create Payment</span>
+                            </div>
+                            <div class="endpoint-body">
+                                <p>Create a new payment.</p>
+                                
+                                <h4>Parameters</h4>
+                                <div class="parameters-table">
+                                    <div class="parameter">
+                                        <span class="param-name">amount</span>
+                                        <span class="param-type">integer</span>
+                                        <span class="param-required">required</span>
+                                        <span class="param-description">Amount in cents</span>
+                                    </div>
+                                    <div class="parameter">
+                                        <span class="param-name">currency</span>
+                                        <span class="param-type">string</span>
+                                        <span class="param-required">required</span>
+                                        <span class="param-description">Three-letter ISO currency code</span>
+                                    </div>
+                                    <div class="parameter">
+                                        <span class="param-name">source</span>
+                                        <span class="param-type">string</span>
+                                        <span class="param-required">required</span>
+                                        <span class="param-description">Payment source token</span>
+                                    </div>
+                                    <div class="parameter">
+                                        <span class="param-name">description</span>
+                                        <span class="param-type">string</span>
+                                        <span class="param-required">optional</span>
+                                        <span class="param-description">Description of the payment</span>
+                                    </div>
+                                </div>
+                                
+                                <h4>Example Request</h4>
+                                <div class="code-block-wrapper">
+                                    <div class="code-content">
+                                        <pre><code>curl -X POST https://api.dgs-pay.com/v1/payments \
+  -H "Authorization: Bearer sk_test_your_secret_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "amount": 2500,
+    "currency": "usd",
+    "source": "tok_visa",
+    "description": "My First Payment"
+  }'</code></pre>
+                                    </div>
+                                </div>
+                                
+                                <h4>Example Response</h4>
+                                <div class="code-block-wrapper">
+                                    <div class="code-content">
+                                        <pre><code>{
+  "id": "pay_1234567890",
+  "object": "payment",
+  "amount": 2500,
+  "currency": "usd",
+  "status": "succeeded",
+  "description": "My First Payment",
+  "created": 1234567890,
+  "source": {
+    "id": "src_1234567890",
+    "object": "source",
+    "type": "card",
+    "card": {
+      "brand": "visa",
+      "last4": "4242"
+    }
+  }
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Error Handling -->
+                <section id="error-handling" class="docs-section">
+                    <h1>Error Handling</h1>
+                    <p class="lead">
+                        Learn how to handle errors and exceptions in your DGS-Pay integration.
+                    </p>
+                    
+                    <h2>Error Response Format</h2>
+                    <p>
+                        When an error occurs, DGS-Pay returns a JSON error object with details:
+                    </p>
+                    
+                    <div class="code-block-wrapper">
+                        <div class="code-content">
+                            <pre><code>{
+  "error": {
+    "type": "card_error",
+    "code": "card_declined",
+    "message": "Your card was declined.",
+    "decline_code": "generic_decline",
+    "param": "source"
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <h2>Common Error Types</h2>
+                    <div class="error-types">
+                        <div class="error-type">
+                            <h4>card_error</h4>
+                            <p>Card-related errors such as insufficient funds or incorrect details.</p>
+                        </div>
+                        <div class="error-type">
+                            <h4>invalid_request_error</h4>
+                            <p>Invalid parameters in the request (missing required fields, invalid format).</p>
+                        </div>
+                        <div class="error-type">
+                            <h4>api_error</h4>
+                            <p>Internal server errors or temporary service issues.</p>
+                        </div>
+                        <div class="error-type">
+                            <h4>authentication_error</h4>
+                            <p>Invalid or missing API authentication.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- AI Assistant -->
+        <div class="ai-assistant" id="ai-assistant">
+            <div class="ai-header">
+                <div class="ai-title">
+                    <i class="fas fa-robot"></i>
+                    <span>DGS-Pay Assistant</span>
+                </div>
+                <button class="ai-toggle" id="ai-toggle">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="ai-chat" id="ai-chat">
+                <div class="ai-message ai-bot">
+                    <div class="message-content">
+                        👋 Hi! I'm your DGS-Pay documentation assistant. I can help you with:
+                    </div>
+                    <ul class="suggested-questions">
+                        <li><button class="suggested-question" data-question="How do I create my first payment?">How do I create my first payment?</button></li>
+                        <li><button class="suggested-question" data-question="What are the available payment methods?">What are the available payment methods?</button></li>
+                        <li><button class="suggested-question" data-question="How do I handle webhooks?">How do I handle webhooks?</button></li>
+                        <li><button class="suggested-question" data-question="Show me code examples for different languages">Show me code examples for different languages</button></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ai-input-container">
+                <div class="ai-input-wrapper">
+                    <input type="text" id="ai-input" placeholder="Ask me anything about DGS-Pay..." maxlength="500">
+                    <button id="ai-send" class="ai-send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="ai-powered-by">
+                    Powered by DGS-Pay Documentation AI
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Assistant Toggle Button -->
+        <button class="ai-assistant-toggle" id="ai-assistant-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="/" class="mobile-bottom-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="/pricing.html" class="mobile-bottom-link">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Pricing</span>
+        </a>
+        <a href="/docs" class="mobile-bottom-link active">
+            <i class="fas fa-book"></i>
+            <span>Docs</span>
+        </a>
+        <a href="/get-started.html" class="mobile-bottom-link">
+            <i class="fas fa-rocket"></i>
+            <span>Get Started</span>
+        </a>
+        <a href="/login.html" class="mobile-bottom-link">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="/js/animations.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/docs.js"></script>
+</body>
+</html>
